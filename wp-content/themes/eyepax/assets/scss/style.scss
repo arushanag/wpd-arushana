@@ -1,0 +1,13 @@
+// tailwind import
+@import "../../node_modules/tailwindcss/base";
+@import "../../node_modules/tailwindcss/components";
+@import "../../node_modules/tailwindcss/utilities";
+// Sass setup
+@import "plugins/plugins";
+@import "typography/typography";
+@import "helper/variable";
+@import "helper/mixins";
+// blocks
+@import "blocks/global/style";
+@import "blocks/header/style";
+@import "blocks/navigation/style";

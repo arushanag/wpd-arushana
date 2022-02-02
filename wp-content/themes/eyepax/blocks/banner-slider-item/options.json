@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Desktop Setting",
+        "options": [
+            {
+                "title": "Text width",
+                "prop": "text-width",
+                "control": "Number"
+            }
+        ]
+    },
+    {
+        "title": "Mobile Setting",
+        "options": [
+            {
+                "title": "Text Color",
+                "prop" : "text-color-mobile",
+                "control": "Color"
+            }
+        ]
+    }
+]

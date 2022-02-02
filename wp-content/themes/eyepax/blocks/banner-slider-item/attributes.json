@@ -1,0 +1,24 @@
+{
+	"options": {
+		"type": "object"
+	},
+	"banner_title": {
+		"type": "string"
+	},
+	"banner_title_width": {
+		"type": "string"
+	},
+	"banner_title_mobile_colour": {
+		"type": "string"
+	},
+	"banner_btn_link": {
+		"type": "string"
+	},
+	"banner_btn_text": {
+		"type": "string"
+	},
+	"banner_img": {
+		"type": "string",
+		"default": "http://placehold.it/200"
+	}
+}

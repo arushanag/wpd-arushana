@@ -1,0 +1,20 @@
+/*!
+Theme Name: Eyepax
+Theme URI: #
+Author: Arushana
+Author URI: #
+Description:Eyepax base theme
+Version: 1.0.0
+Requires PHP: 7.2
+License: Proprietary
+License URI: LICENSE
+Text Domain: Eyepax
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+@media only screen and (max-width: 1000px) {
+    .header-main-content {
+        display: none !important;
+    }
+    
+}

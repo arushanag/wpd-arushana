@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+body {
+    @apply font-text;
+    font-size: rem-calc(16);
+    line-height: 1.3;
+    color: $black;
+    @apply font-light;
+    @include breakpoint(lg) {
+        font-size: rem-calc(18);
+    }
+}
+
+.container {
+    @include breakpoint(xxl) {
+        max-width: 100% !important;
+        padding: 0 120px !important;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-heading;
+}
+
+h1,
+.h1 {
+    font-size: rem-calc(38);
+    line-height: 0.9;
+    @include breakpoint(lg) {
+        font-size: rem-calc(66);
+    }
+    [class^="bg-"],
+    [class*=" bg-"] {
+        margin: 0;
+        line-height: 1.1;
+    }
+}
+
+h2,
+.h2 {
+    font-size: rem-calc(28);
+    line-height: 1.3;
+    @include breakpoint(lg) {
+        font-size: rem-calc(58) !important;
+        line-height: 1.15;
+    }
+}
+
+h3,
+.h3 {
+    font-size: rem-calc(24);
+    line-height: 1.1;
+    @include breakpoint(lg) {
+        font-size: rem-calc(36);
+        line-height: 1.1;
+    }
+}
+
+h4,
+.h4 {
+    font-size: rem-calc(18);
+    line-height: 1.1;
+    @include breakpoint(lg) {
+        font-size: rem-calc(30);
+        line-height: 1.1;
+    }
+}
+
+h5,
+.h5 {
+    font-size: rem-calc(16);
+    line-height: 1.1;
+    @include breakpoint(lg) {
+        font-size: rem-calc(22);
+        line-height: 1.1;
+    }
+}
+
+h6,
+.h6 {
+    font-size: rem-calc(16);
+    line-height: 1.1;
+    @include breakpoint(lg) {
+        font-size: rem-calc(22);
+        line-height: 1.1;
+    }
+}
+
+p,
+.p {
+    font-size: rem-calc(14);
+    line-height: 1.1;
+    @include breakpoint(lg) {
+        font-size: rem-calc(20);
+        line-height: 1.1;
+    }
+}
+
+p {
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    &:active,
+    &:visited,
+    &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        color: inherit;
+    }
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+.bg-block {
+    color: $white;
+}
+
+.bg-black {
+    background-color: $black;
+    color: $white;
+    box-shadow: 14px 0 0 $black, -14px 0 0 $black;
+    padding-top: 3px;
+    line-height: 1;
+}
+
+.bg-white {
+    background-color: $white;
+    color: $black;
+    box-shadow: 14px 0 0 $white, -14px 0 0 $white;
+    padding-top: 3px;
+    line-height: 1;
+}
+
+.bg-primary {
+    background-color: $primary;
+    box-shadow: 14px 0 0 $primary, -14px 0 0 $primary;
+    padding-top: 3px;
+    line-height: 1;
+}
+
+.bg-secondary {
+    background-color: $secondary;
+    box-shadow: 14px 0 0 $secondary, -14px 0 0 $secondary;
+    padding-top: 3px;
+    line-height: 1;
+}
+
+.bg-green {
+    background-color: $green;
+    box-shadow: 14px 0 0 $green, -14px 0 0 $green;
+    padding-top: 3px;
+    line-height: 1.2;
+    @include breakpoint(lg) {
+        line-height: 1;
+    }
+}
+
+.background-grey {
+    background-color: $light-grey;
+}
+
+.bg-orange {
+    background-color: $orange;
+    box-shadow: 14px 0 0 $orange, -14px 0 0 $orange;
+    padding-top: 3px;
+    line-height: 1;
+}
+
+.bg-purple {
+    background-color: $purple;
+    margin-left: 13px !important;
+    margin-right: 13px !important;
+    box-shadow: 14px 0 0 $purple, -14px 0 0 $purple;
+    padding-top: 3px;
+    line-height: 1;
+}
+
+.bg-lightblue {
+    background-color: $lightblue;
+    box-shadow: 14px 0 0 $lightblue, -14px 0 0 $lightblue;
+    padding-top: 3px;
+    line-height: 1;
+}
+
+.bg-pink {
+    background-color: $pink;
+    color: $white;
+    box-shadow: 14px 0 0 $pink, -14px 0 0 $pink;
+    padding-top: 3px;
+    line-height: 1;
+}
+
+.bg-light-pink {
+    background-color: $light-pink;
+    color: $white;
+    box-shadow: 14px 0 0 $light-pink, -14px 0 0 $light-pink;
+    padding-top: 3px;
+    line-height: 1;
+}
+
+.bg-blue {
+    background-color: $primary;
+    color: $white;
+    box-shadow: 14px 0 0 $primary, -14px 0 0 $primary;
+    padding-top: 3px;
+    line-height: 1.5;
+    margin: 0 15px;
+}
+
+.search-highlight {
+    background-color: $search-highlight;
+    color: $black;
+    box-shadow: 14px 0 0 $search-highlight, -14px 0 0 $search-highlight;
+    padding-top: 3px;
+    line-height: 1.5;
+}
+
+.site-wrapper {
+    padding-top: 94px;
+    overflow: visible;
+    @include breakpoint(lg) {
+        padding-top: 0px;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

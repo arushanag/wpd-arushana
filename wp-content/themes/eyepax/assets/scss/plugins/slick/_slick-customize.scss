@@ -1,0 +1,30 @@
+.half-content-half-image {
+    .slick-next,
+    .slick-prev {
+        color: white;
+        transform: none;
+        width: 30px;
+        height: 30px;
+        z-index: 1;
+        top: 42%;
+        &:focus,
+        &:hover {
+            color: white;
+        }
+        span {
+            font-size: 30px;
+        }
+    }
+    .slick-next {
+        right: 15px;
+    }
+    .slick-prev {
+        left: auto;
+        right: 50px;
+    }
+}
+
+.slick-next:before,
+.slick-prev:before {
+    display: none;
+}

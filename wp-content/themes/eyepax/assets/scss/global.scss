@@ -1,0 +1,8 @@
+// tailwind import
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// Sass setup
+@import "typography/typography";
+@import "helper/variable";
+@import "helper/mixins";
