@@ -110,10 +110,7 @@ if (!function_exists('piw_setup')) :
     endif;
     add_action('after_setup_theme', 'piw_setup');
 
-/**
- * Load dynamic widgets.
- */
-require get_template_directory() . '/inc/widgets.php';
+
 
 /**
  * Register Theme Option through ACF.
@@ -208,3 +205,12 @@ function fusion_scripts()
        
 }
 add_action('wp_enqueue_scripts', 'fusion_scripts');
+
+$blocks_auto_register = require __DIR__ . '/automated-gutenberg-block-registration/auto-register-gutenberg-blocks.php';
+add_action('init', $blocks_auto_register([
+	'base_path' => __DIR__,
+	'base_url' => get_stylesheet_directory_uri(),
+	'block_namespace' => 'marlin',
+	'dist_suffix' => '',
+	'debug' => true
+]));

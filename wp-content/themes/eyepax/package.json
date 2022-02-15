@@ -1,40 +1,70 @@
 {
-  "name": "piw",
+  "name": "underscores",
   "version": "1.0.0",
-  "description": "Simple front-end boilerplate using Gulp 4",
-  "main": "gulpfile.js",
+  "description": "Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.",
+  "author": "Automattic Theme Team",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://github.com/Automattic/_s#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thecodercoder/frontend-boilerplate.git"
+    "url": "git+https://github.com/Automattic/_s.git"
   },
-  "keywords": [
-    "gulp",
-    "boilerplate",
-    "html",
-    "css",
-    "javascript"
-  ],
-  "author": "@thecodercoder",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thecodercoder/frontend-boilerplate/issues"
+    "url": "https://github.com/Automattic/_s/issues"
   },
-  "homepage": "https://github.com/thecodercoder/frontend-boilerplate#readme",
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "cssnano": "^4.1.10",
+    "@wordpress/scripts": "^9.0.0",
+    "dir-archiver": "^1.1.1",
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
+    "postcss-cli": "^7.1.1",
+    "rtlcss": "^2.5.0",
+    "sass": "^1.26.10"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "start": "postcss --watch -o style.css style/style.scss",
+    "compile:css": "postcss style/style.scss -o style.css",
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map",
+    "build": "concurrently --raw -c \"cyan,blue\" --names \"blocks, css\"  \"npm:build_css\" \"npm:build_blocks\"",
+    "build_css": "tailwindcss build style/style.scss > style.css",
+    "watch_blocks": "nodemon -w blocks/ -e js,jsx,scss -x \"npm run build_blocks\"",
+    "build_blocks": "concurrently --raw -c \"cyan,blue,green,yellow\" --names \"scripts, styles, editor styles\"  \"npm:build_blocks_scripts\" \"npm:build_blocks_styles\" \"npm:build_blocks_editor_styles\"",
+    "build_blocks_scripts": "parcel build --out-file blocks.js -d ./ blocks/index.jsx",
+    "build_blocks_styles": "parcel build --out-file blocks.css -d ./ blocks/style.scss",
+    "build_blocks_editor_styles": "parcel build --out-file blocks-editor.css -d ./ blocks/editor.scss"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1",
-    "masonry-layout": "^4.2.2",
-    "slick-carousel": "^1.8.1",
-    "tailwindcss": "^1.4.6"
+    "concurrently": "^5.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "nodemon": "^2.0.3",
+    "parcel-bundler": "^1.12.4",
+    "postcss-import": "^12.0.1",
+    "postcss-sass": "^0.4.4",
+    "sugarss": "^2.0.0",
+    "tailwindcss": "^1.8.10"
   }
 }

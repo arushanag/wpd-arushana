@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Post Grid settings",
+        "options": [
+            {
+                "title": "Grid Title",
+                "prop": "grid_title",
+                "control": "Text"
+            },
+            {
+                "title": "Select your post type",
+                "prop": "post_type",
+                "control": "Select",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "Select"
+                    },
+                    {
+                        "value": "post",
+                        "label": "Post"
+                    },
+                    {
+                        "value": "media-release",
+                        "label": "Media Release"
+                    },
+                    {
+                        "value": "media-event",
+                        "label": "Media Event"
+                    },
+                ]
+            },
+            {
+                "title": "Posts per page",
+                "prop": "posts_per_page",
+                "control": "Text"
+            },
+            {
+                "title": "Post sorting order",
+                "prop": "sorting_order",
+                "control": "Select",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "Select"
+                    },
+                    {
+                        "value": "ASC",
+                        "label": "Ascending"
+                    },
+                    {
+                        "value": "DESC",
+                        "label": "Descending"
+                    }
+                ]
+            },
+            {
+                "title": "Order by field",
+                "prop": "order_by",
+                "control": "Select",
+                "options": [
+                    {
+                        "value": "",
+                        "label": "Select"
+                    },
+                    {
+                        "value": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "value": "date",
+                        "label": "Publish Date"
+                    },
+                    {
+                        "value": "meta_value_num",
+                        "label": "Meta Value"
+                    }
+                ],
+            }
+        ]
+    },
+]

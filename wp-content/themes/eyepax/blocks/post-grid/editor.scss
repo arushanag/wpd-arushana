@@ -1,0 +1,22 @@
+.latest-event-slider{
+	.latest-slider-container{
+		.events-wrap{
+			.events-slide-image{
+				margin: 1em;
+			}
+			.events-slide-post{
+				width: 75%;
+				margin: 0 1em;
+				h3{
+					font-size: 1.2em;
+				}
+				.event-description{
+					p{
+						font-size: 0.8em;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}

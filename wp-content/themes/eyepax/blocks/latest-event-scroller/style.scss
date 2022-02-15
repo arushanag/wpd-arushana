@@ -1,0 +1,43 @@
+.latest-event-section{
+	background-color: #F7F7F7;
+	h2{
+		color: #454547;
+	}
+	hr{
+		    display: block;
+		    color: #454547;
+		    margin: auto;
+		    width:15%;
+		    margin-end: auto;
+		    margin-start: auto;
+		    border-top: 1px solid;
+		    overflow: hidden;
+		    margin-before: 0.5em;
+		    margin-after: 0.5em;
+	}
+	.latest-events-container{
+		background-color: #fff;
+		box-shadow: 0 2px 4px 0 #E1E1E1;
+			.events-wrap{
+				display: flex !important;
+				img{
+					width: 100%;
+				}
+				.post-title, .post-description{
+					h3, p {
+						color: #454547;
+					}
+				}
+			}
+			.slick-dots{
+				li{
+				 button{
+				 	&::before{
+				 	color: #454547;
+				 	font-size: 16px;
+				 	}
+				 }
+				}
+			}
+	}
+}

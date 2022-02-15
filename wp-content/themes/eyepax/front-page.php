@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Linking-Integrating-website
+ * @package Eyepax-website
  */
 
 get_header();
